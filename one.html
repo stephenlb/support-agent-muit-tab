@@ -34,7 +34,7 @@ pubnub.addListener({
 pubnub.subscribe({channels: channels});
 
 // Explicit Leave
-window.addEventListener('beforeunload', event => { pubnub.unsubscribeAll(); } );
+//window.addEventListener('beforeunload', event => { pubnub.unsubscribeAll(); } );
 
 })();
 </script>

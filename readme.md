@@ -13,6 +13,13 @@ The example code shows the SDK settings needed to accomlish each option.
 
 ![support agent presence multi tab](media/support-agent-presence-multi-tab.gif)
 
+> This option also is a good fit for TCP-FIN tracking.
+> When a TCP connection is closed, this can be counted as well.
+> The example also offers a
+> `window.addEventListener('beforeunload', event => { pubnub.unsubscribeAll(); } );`
+> browser event.
+> Both options work in practice.
+
 An "agent-channel" is a channel the agent subscribes to.
 Each tab has an "agent-uuid" with a suffix of a "windowID/tabID".
 The webhook is registered to "active" and "inactive".
@@ -27,10 +34,10 @@ accomplish the support chat agent business requirements.
 
 ### Option Two
 
-Using special JS SDK settings and special PNConfig settings,
+Using special JS SDK settings and special PubNub Config settings,
 we can track an Agent's activity across all tabs, using a single UUID.
 After inactivity of 300 seconds (tunable),
 a timeout event is fired, marking the agent has gone offline.
 This option is the simplest,
-though requires specific SDK and PNConfig settings.
+though requires specific SDK and PubNub Config settings.
 It's the simplest as it requires little consideration.
