@@ -15,11 +15,11 @@ const pubnub = new PubNub({
     subscribeKey        : subscribeKey,
     uuid                : userId,
     origin              : origin,
-    ssl                 : false,
+    ssl                 : true,
     useInstanceId       : true,
     presenceTimeout     : 300, // SECONDS, consider offline after 5 minutes of inactivity
     heartbeatInterval   : 0,
-    //suppressLeaveEvents : true,
+    suppressLeaveEvents : false,
 });
 
 pubnub.addListener({
