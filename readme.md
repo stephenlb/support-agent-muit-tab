@@ -6,13 +6,12 @@ The example code shows the SDK settings needed to accomlish each option.
 
 ## Presence Tuning/Configuration for Support Agent Tracking
 
-> **TL;DR**
-> **Option #1 is a general good approach.**
-
-Heartbeats should be disabled due to browser throttling and tabs in the background.
-The heartbeats are disabled in the examples.
+> **tl;dr**
+> **Option one is a best practice approach.**
 
 ### Option One
+
+![support agent presence multi tab](media/support-agent-presence-multi-tab.gif)
 
 An "agent-channel" is a channel the agent subscribes to.
 Each tab has an "agent-uuid" with a suffix of a "windowID/tabID".
