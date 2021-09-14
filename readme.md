@@ -14,7 +14,7 @@ The example code shows the SDK settings needed to accomlish each option.
 ![support agent presence multi tab](media/support-agent-presence-multi-tab.gif)
 
 > This option also is a good fit for TCP-FIN tracking.
-> When a TCP connection is closed, this can be counted as well.
+> When a TCP connection is closed, this can be counted as a presence `leave` event.
 > The example also offers a
 > `window.addEventListener('beforeunload', event => { pubnub.unsubscribeAll(); } );`
 > browser event.
