@@ -19,7 +19,7 @@ const pubnub = new PubNub({
     useInstanceId       : true,
     presenceTimeout     : 300, // SECONDS, consider offline after 5 minutes of inactivity
     heartbeatInterval   : 0,
-    suppressLeaveEvents : true,
+    suppressLeaveEvents : false,
 });
 
 pubnub.addListener({
@@ -35,6 +35,9 @@ pubnub.addListener({
 });
 
 pubnub.subscribe({channels: channels});
+
+// Explicit Leave
+//window.addEventListener('beforeunload', event => { pubnub.unsubscribeAll(); } );
 
 })();
 </script>
