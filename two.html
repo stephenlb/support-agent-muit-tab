@@ -19,7 +19,7 @@ const pubnub = new PubNub({
     useInstanceId       : true,
     presenceTimeout     : 300, // SECONDS, consider offline after 5 minutes of inactivity
     heartbeatInterval   : 0,
-    suppressLeaveEvents : false,
+    suppressLeaveEvents : true,
 });
 
 pubnub.addListener({
